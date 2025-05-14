@@ -42,7 +42,7 @@ class CircularTimerViewModel: ObservableObject {
 
         timer = Timer.publish(every: timeStep, on: .main, in: .common).autoconnect()
 
-        timer
+        cancellable = timer
             .receive(on: DispatchQueue.main)
             .compactMap { [weak self] _ in
 
@@ -62,7 +62,10 @@ class CircularTimerViewModel: ObservableObject {
                 }
             }
             .removeDuplicates()
-            .assign(to: &$progress)
+            .sink(receiveValue: { [weak self] value in
+                self?.progress = value
+            })
+
     }
 
     func textFromTimeInterval() -> String {
