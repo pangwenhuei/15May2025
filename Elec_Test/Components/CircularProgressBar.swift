@@ -29,17 +29,17 @@ struct CircularProgressBar: View {
         ZStack {
             Circle()
                 .stroke(lineWidth: 8.0)
-                .foregroundColor(Color(0xFF323333 as! CGColor))
+                .foregroundColor(Color(CGColor.cgColorWithHexadecimal(0xFF323333)))
 
             Circle()
                 .trim(from: 0.0, to: CGFloat(min(progress, 1.0)))
                 .stroke(style: StrokeStyle(lineWidth: 8.0, lineCap: .round, lineJoin: .round))
-                .foregroundColor(Color(0xFFe1ad01 as! CGColor))
+                .foregroundColor(Color(CGColor.cgColorWithHexadecimal(0xFFe1ad01)))
                 .rotationEffect(Angle(degrees: 270.0))
                 .animation(.linear)
 
             Text(text)
-                .foregroundColor(Color(0xFF011e41 as! CGColor))
+                .foregroundColor(Color(CGColor.cgColorWithHexadecimal(0xFF011e41)))
                 .font(.custom("MetricLight", size: 46))
         }
         .frame(width: 234.0, height: 234.0)

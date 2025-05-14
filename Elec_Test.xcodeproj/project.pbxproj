@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ADAE23662DD4D0E500E5ED0E /* CGColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAE23652DD4D0DF00E5ED0E /* CGColor+Extensions.swift */; };
 		E8244E44290B586100C7B1EA /* Elec_TestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8244E43290B586100C7B1EA /* Elec_TestApp.swift */; };
 		E8244E46290B586100C7B1EA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8244E45290B586100C7B1EA /* ContentView.swift */; };
 		E8244E48290B586400C7B1EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8244E47290B586400C7B1EA /* Assets.xcassets */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		ADAE23652DD4D0DF00E5ED0E /* CGColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGColor+Extensions.swift"; sourceTree = "<group>"; };
 		E8244E40290B586100C7B1EA /* Elec_Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Elec_Test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8244E43290B586100C7B1EA /* Elec_TestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Elec_TestApp.swift; sourceTree = "<group>"; };
 		E8244E45290B586100C7B1EA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 		E8244E6E290B596300C7B1EA /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				ADAE23652DD4D0DF00E5ED0E /* CGColor+Extensions.swift */,
 				E8244E6F290B59BF00C7B1EA /* CircularProgressBar.swift */,
 				E8244E71290B5A3100C7B1EA /* CircularTimer.swift */,
 				E8244E73290B5A8800C7B1EA /* CircularTimerViewModel.swift */,
@@ -282,6 +285,7 @@
 				E8244E74290B5A8800C7B1EA /* CircularTimerViewModel.swift in Sources */,
 				E8244E72290B5A3100C7B1EA /* CircularTimer.swift in Sources */,
 				E8244E46290B586100C7B1EA /* ContentView.swift in Sources */,
+				ADAE23662DD4D0E500E5ED0E /* CGColor+Extensions.swift in Sources */,
 				E8244E76290B5AB700C7B1EA /* Int+Extensions.swift in Sources */,
 				E8244E44290B586100C7B1EA /* Elec_TestApp.swift in Sources */,
 				E8244E70290B59BF00C7B1EA /* CircularProgressBar.swift in Sources */,
