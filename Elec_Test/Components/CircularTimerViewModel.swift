@@ -20,7 +20,7 @@ class CircularTimerViewModel: ObservableObject {
         let seconds: Int
 
         var interval: TimeInterval {
-            TimeInterval((hours * 60 * 60)  (minutes * 60),  seconds)
+            TimeInterval((hours * 60 * 60) + (minutes * 60) + seconds)
         }
     }
 
@@ -58,7 +58,7 @@ class CircularTimerViewModel: ObservableObject {
 
                     self.timerInterval -= self.timeStep
                     print("progress \(self.progress)")
-                    return self.progress  self.stepProgress
+                    return self.progress
                 }
             }
             .removeDuplicates()
@@ -93,18 +93,23 @@ class CircularTimerViewModel: ObservableObject {
     }
 
     private func hoursString(hours: Int) -> String {
-        languageService.getResourceString(resourceKey: StringKey().timerHours, params: [hours.toString].toKotlin())
+//        languageService.getResourceString(resourceKey: StringKey().timerHours, params: [hours.toString].toKotlin())
+        "\(hours) \(hours == 1 ? "hour" : "hours")"
     }
 
     private func minutesString(minutes: Int) -> String {
-        languageService.getResourceString(resourceKey: StringKey().timerMinutes, params: [minutes.toString].toKotlin())
+        //        languageService.getResourceString(resourceKey: StringKey().timerMinutes, params: [minutes.toString].toKotlin())
+        "\(minutes) \(minutes == 1 ? "minute" : "minutes")"
+
     }
 
     private func shortMinutesString(minutes: Int) -> String {
-        languageService.getResourceString(resourceKey: StringKey().timeMinutesShort, params: [minutes.toString].toKotlin())
+//        languageService.getResourceString(resourceKey: StringKey().timeMinutesShort, params: [minutes.toString].toKotlin())
+        "\(minutes) m"
     }
 
     private func shortSecondsString(seconds: Int) -> String {
-        languageService.getResourceString(resourceKey: StringKey().timeSecondsShort, params: [seconds.toString].toKotlin()).trimmingCharacters(in: .whitespaces)
+//        languageService.getResourceString(resourceKey: StringKey().timeSecondsShort, params: [seconds.toString].toKotlin()).trimmingCharacters(in: .whitespaces)
+        "\(seconds) s"
     }
 }
