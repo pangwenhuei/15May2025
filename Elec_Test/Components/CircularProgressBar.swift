@@ -27,7 +27,7 @@ struct CircularProgressBar: View {
 
     var body: some View {
         ZStack {
-            CircularTimer(interval: TimeInterval(10), progress: CGFloat(0))
+            CircularTimer(interval: TimeInterval(20), progress: CGFloat(0.5))
 
         }
         .frame(width: 234.0, height: 234.0)

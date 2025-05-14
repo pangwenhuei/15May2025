@@ -42,8 +42,7 @@ class CircularTimerViewModel: ObservableObject {
 
         timer = Timer.publish(every: timeStep, on: .main, in: .common).autoconnect()
 
-        Timer.publish(every: timeStep, on: .main, in: .default)
-            .autoconnect()
+        timer
             .receive(on: DispatchQueue.main)
             .compactMap { [weak self] _ in
 
@@ -58,6 +57,7 @@ class CircularTimerViewModel: ObservableObject {
 
                     self.timerInterval -= self.timeStep
                     print("progress \(self.progress)")
+                    self.progress += self.stepProgress
                     return self.progress
                 }
             }
