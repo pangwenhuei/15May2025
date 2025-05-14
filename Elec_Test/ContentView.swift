@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var progress:Float = 1.0
-    @State var text = "TEST"
+    @State var progress:Float = 0.5
+    @State var text = "10"
     
     var body: some View {
         VStack {
