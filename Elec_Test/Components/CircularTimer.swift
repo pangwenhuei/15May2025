@@ -50,17 +50,17 @@ struct CircularTimer: View {
 
                     Circle()
                         .stroke(lineWidth: strokeWidth)
-                        .foregroundColor(Color(0xFF323333 as! CGColor))
+                        .foregroundColor(Color(CGColor.cgColorWithHexadecimal(0xFF323333)))
 
                     Circle()
                         .trim(from: 0, to: CGFloat(min(1.0,  viewModel.progress)))
                         .stroke(style: StrokeStyle(lineWidth: strokeWidth, lineCap: .round, lineJoin: .round))
-                        .foregroundColor(Color(0xFF4f758b as! CGColor))
+                        .foregroundColor(Color(CGColor.cgColorWithHexadecimal(0xFF4f758b)))
 
                     Circle()
                         .trim(from: 0, to: CGFloat(min(min(1.0,  viewModel.progress), 0.001)))
                         .stroke(style: StrokeStyle(lineWidth: strokeWidth, lineCap: .square, lineJoin: .round))
-                        .foregroundColor(Color(0xFF4f758b as! CGColor))
+                        .foregroundColor(Color(CGColor.cgColorWithHexadecimal(0xFF4f758b)))
                 }
                 .frame(width: proxy.size.width * 0.7, alignment: .center)
                 .rotationEffect(.degrees(90))
