@@ -29,7 +29,7 @@ class CircularTimerViewModel: ObservableObject {
 
     let timer: ProgressTimer
     private let timeStep = 0.25
-    private let stepProgress: CGFloat
+    let stepProgress: CGFloat
 
     var cancellable: Cancellable?
 
